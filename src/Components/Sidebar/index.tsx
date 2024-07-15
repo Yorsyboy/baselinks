@@ -20,7 +20,7 @@ const Sidebar = () => {
     return (
         <div className="flex flex-col h-full justify-between">
             <div className="flex items-center justify-center mt-4 mb-4">
-                <img className="h-32 w-32 rounded-full border-4 border-white dark:border-gray-800 mx-auto my-4"
+                <img className="h-32 w-32 rounded-full border-4 border-white mx-auto my-4"
                         src={UserOne} alt="Avatar"/>
             </div>
             <div>

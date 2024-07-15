@@ -48,7 +48,7 @@ function Dashboard() {
                 <ul className="list-disc mt-5 pl-4">
                   <li>{c.title}</li>
                 </ul>
-                <div className="w-full bg-neutral-200 dark:bg-neutral-600">
+                <div className="w-full bg-neutral-200">
                   <div
                     className="bg-green-500 p-0.5 text-center text-sm font-medium leading-none text-white"
                     style={{ width: `${c.progress}` }}

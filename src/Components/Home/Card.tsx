@@ -9,7 +9,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, imageUrl, properties }) => {
     return (
-        <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+        <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
             <TERipple>
                 <div className="relative overflow-hidden bg-cover bg-no-repeat">
                     <img className="rounded-t-lg w-full h-48" src={imageUrl} alt="" />
@@ -19,12 +19,12 @@ const Card: React.FC<CardProps> = ({ title, imageUrl, properties }) => {
                 </div>
             </TERipple>
             <div className="p-6">
-                <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">{title}</h3>
+                <h3 className="text-lg font-semibold text-neutral-900">{title}</h3>
                 <div>
                     {properties && (
                         <div className="flex flex-wrap mt-4">
                             {properties.map((property, index) => (
-                                <span key={index} className="text-xs text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800 px-2 py-1 rounded-full mr-2 mt-2">{property}</span>
+                                <span key={index} className="text-xs text-neutral-500 bg-neutral-100 px-2 py-1 rounded-full mr-2 mt-2">{property}</span>
                             ))}
                         </div>
                     )}

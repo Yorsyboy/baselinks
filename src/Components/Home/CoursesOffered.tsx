@@ -97,7 +97,7 @@ const CoursesOffered = forwardRef<HTMLDivElement>((props, ref)=> {
           wait? Enroll in a course today and start learning!
         </p>
       </div>
-      <div className="grid grid-cols-1 md:gap-10 md:grid-cols-3 mt-4">
+      <div className="grid grid-cols-1 gap-8 md:gap-10 md:grid-cols-3 mt-4">
         {cardData.map((card, index) => (
           <Card
             title={card.title}
