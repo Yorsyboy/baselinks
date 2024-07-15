@@ -1,5 +1,3 @@
-// import { Prec } from 'Assets';
-// import CourseCard from 'Components/PayForCourse/CourseCard';
 import { Frontend } from '../../Assets/Index';
 import CourseDetailTab from '../../Components/Tab/CourseDetailTab';
 import React from 'react';

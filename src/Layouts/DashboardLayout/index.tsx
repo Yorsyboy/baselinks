@@ -1,38 +1,10 @@
 import { Logo } from "../../Assets/Index";
 import Sidebar from "../../Components/Sidebar";
-import useCurrentPath from "../../Hooks/useCurrentPath";
-import React, { useEffect, useReducer, useState } from "react";
+import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import { IoIosArrowDropdown } from "react-icons/io";
-import { PiExamFill } from "react-icons/pi";
-import { FaUser, FaUserGraduate } from "react-icons/fa";
-import { RiLogoutCircleRFill } from "react-icons/ri";
 import Header from "../../Components/Header";
 
 const DashboardLayout = (props: any) => {
-  const initialState = {
-    openMobileSideBar: false,
-  };
-  const [state, setState] = useReducer(
-    (state: any, newState: any) => ({ ...state, ...newState }),
-    initialState
-  );
-  const { openMobileSideBar } = state;
-  const [user, setUser] = useState<String>("Username");
-  const [showDropdown, setShowDropdown] = useState(false);
-
-  const currentPath = useCurrentPath();
-
-  useEffect(
-    () =>
-      // Cleanup method
-      () => {
-        setState({
-          ...initialState,
-        });
-      },
-    []
-  );
 
   return (
     <div className="font-montRegular bg-[#f1f5f9] overflow-y-auto w-screen h-screen relative">

@@ -215,11 +215,11 @@ function Questions() {
                             className="fixed top-0 left-0 right-0 z-50 p-4 bg-gray-700 bg-opacity-50 flex justify-center items-center h-screen"
                             onClick={handleToggleModal} // Close the modal when the background is clicked
                         >
-                            <div className="bg-white rounded-lg shadow p-6">
-                                <button type="button" onClick={handleBackToAssessment} className="bg-green-600 text-white py-4 px-2">
+                            <div className="bg-white flex rounded-lg shadow p-6">
+                                <button type="button" onClick={handleBackToAssessment} className="bg-green-600 text-white text-xs rounded-md py-4 px-2">
                                     Back to Assessment
                                 </button>
-                                <button type="button" onClick={handleSubmit} className="bg-lmswarning text-white py-4 px-3 ml-3">
+                                <button type="button" onClick={handleSubmit} className="bg-lmswarning text-white text-xs rounded-md py-4 px-3 ml-3">
                                     Confirm finish now
                                 </button>
                             </div>

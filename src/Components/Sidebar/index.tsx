@@ -2,7 +2,6 @@ import React from 'react';
 import SidebarLayout from './SidebarLayout';
 import { useNavigate } from 'react-router-dom';
 import useCurrentPath from '../../Hooks/useCurrentPath';
-// import { useSelector } from 'react-redux';
 import { UserAccountType } from '../../types';
 import { guestSidebarLinks, adminSidebarLinks} from './data';
 import { User, UserOne } from '../../Assets/Index';
@@ -10,12 +9,6 @@ import { User, UserOne } from '../../Assets/Index';
 const Sidebar = () => {
     const navigate = useNavigate();
     const activeLink = useCurrentPath();
-    // const { 
-    //     // user
-
-    //  } = useSelector((state: any) => state.auth);
-
-    // Check if current path contains 'admin'
     const isAdminRoute = activeLink.includes('admin');
 
     // Determine account type based on current path

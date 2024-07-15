@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-// import AuthLogoDisplay from '../../Components/Display/AuthLogoDisplay';
 import Input from '../../Components/Forms/Input';
 import Password from '../../Components/Forms/Password';
 import { Link } from 'react-router-dom';
 import { SubmitButton } from '../../Components/Button/Index';
-import Select from '../../Components/Forms/Select';
 import CheckBox from '../../Components/Forms/CheckBox';
 import { Logo } from '../../Assets/Index';
 

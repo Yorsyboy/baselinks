@@ -1,7 +1,6 @@
 import AuthBg from './Images/AuthBg.png';
 import AuthBg2 from './Images/AuthBg2.png';
 import Logo from './Images/baselink.png';
-import Logo2 from './Images/baselink.png';
 import Key from './Images/key.svg';
 import Facebook from './Icons/Facebook.svg';
 import Instagram from './Icons/Instagram.svg';
@@ -11,7 +10,6 @@ import Arrow from './Icons/arrow.png';
 import Mail from './Images/Email.png';
 import Line from './Images/Line.png';
 import Girl from './Images/Girl.png';
-import DropdownArrowIcon from './Icons/arrow.svg';
 import User from './Icons/User.svg';
 import Home from './Icons/home.svg';
 import Forum from './Icons/forum.svg';
@@ -38,7 +36,6 @@ export {
     AuthBg,
     AuthBg2,
     Logo,
-    Logo2,
     Facebook,
     Instagram,
     Linkedin,
@@ -48,7 +45,6 @@ export {
     Mail,
     Line,
     Girl,
-    DropdownArrowIcon,
     User,
     Home,
     Learn,
