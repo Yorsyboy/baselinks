@@ -43,7 +43,7 @@ const TabComponent: React.FC = () => {
       <div className="flex justify-between items-center max-w-5xl mx-auto md:mt-10 mb-4 border-b border-gray-200">
         <h1 className=" font-bold mt-5">Report an issue</h1>
         <ul
-          className="flex flex-wrap -mb-px text-sm font-medium text-center"
+          className="flex -mb-px text-sm font-medium text-center"
           role="tablist"
         >
           <li className="mr-2" role="presentation">

@@ -8,7 +8,11 @@ type HomeHeaderProps = {
   scrollToTeam: any;
 };
 
-const HomeHeader = ({ scrollToCourses, scrollToAbout, scrollToTeam }: HomeHeaderProps) => {
+const HomeHeader = ({
+  scrollToCourses,
+  scrollToAbout,
+  scrollToTeam,
+}: HomeHeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -33,7 +37,7 @@ const HomeHeader = ({ scrollToCourses, scrollToAbout, scrollToTeam }: HomeHeader
             className="inline-flex p-1 text-black transition-all duration-200 border border-black lg:hidden focus:bg-gray-100 hover:bg-gray-100"
           >
             <svg
-              className={`w-6 h-6 ${menuOpen ? 'hidden' : 'block'}`}
+              className={`w-6 h-6 ${menuOpen ? "hidden" : "block"}`}
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -47,7 +51,7 @@ const HomeHeader = ({ scrollToCourses, scrollToAbout, scrollToTeam }: HomeHeader
               />
             </svg>
             <svg
-              className={`w-6 h-6 ${menuOpen ? 'block' : 'hidden'}`}
+              className={`w-6 h-6 ${menuOpen ? "block" : "hidden"}`}
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -89,11 +93,11 @@ const HomeHeader = ({ scrollToCourses, scrollToAbout, scrollToTeam }: HomeHeader
               About
             </Link>
             <Link
-               to="#team"
-               onClick={(e) => {
-                 e.preventDefault();
-                 scrollToTeam();
-               }}
+              to="#team"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToTeam();
+              }}
               className="text-base font-semibold text-lmsPrimary transition-all duration-200 hover:text-opacity-80"
             >
               Team
@@ -124,37 +128,49 @@ const HomeHeader = ({ scrollToCourses, scrollToAbout, scrollToTeam }: HomeHeader
               Home
             </Link>
             <Link
-              to="/courses"
+              to="#courses"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToCourses();
+              }}
               className="block px-3 py-2 text-base font-semibold text-lmsPrimary transition-all duration-200 hover:text-opacity-80"
             >
               Courses
             </Link>
             <Link
-              to="/about"
+              to="#about"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToAbout();
+              }}
               className="block px-3 py-2 text-base font-semibold text-lmsPrimary transition-all duration-200 hover:text-opacity-80"
             >
               About
             </Link>
             <Link
-              to="/team"
+              to="#team"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToTeam();
+              }}
               className="block px-3 py-2 text-base font-semibold text-lmsPrimary transition-all duration-200 hover:text-opacity-80"
             >
               Team
             </Link>
-           <div className="flex gap-4">
-           <Link
-              to="/auth/login"
-              className="block px-3 py-2 text-base font-semibold text-black border-2 border-lmsPrimary hover:bg-lmsPrimary rounded-full hover:text-white transition-all duration-200 focus:bg-black focus:text-white"
-            >
-              Log In
-            </Link>
-            <Link
-              to="/auth/signup"
-              className="block px-3 py-2 text-base font-semibold text-black border-2 border-lmsPrimary hover:bg-lmsPrimary rounded-full hover:text-white transition-all duration-200 focus:bg-black focus:text-white"
-            >
-              Register
-            </Link>
-           </div>
+            <div className="flex gap-4">
+              <Link
+                to="/auth/login"
+                className="block px-3 py-2 text-base font-semibold text-black border-2 border-lmsPrimary hover:bg-lmsPrimary rounded-full hover:text-white transition-all duration-200 focus:bg-black focus:text-white"
+              >
+                Log In
+              </Link>
+              <Link
+                to="/auth/signup"
+                className="block px-3 py-2 text-base font-semibold text-black border-2 border-lmsPrimary hover:bg-lmsPrimary rounded-full hover:text-white transition-all duration-200 focus:bg-black focus:text-white"
+              >
+                Register
+              </Link>
+            </div>
           </div>
         </div>
       )}

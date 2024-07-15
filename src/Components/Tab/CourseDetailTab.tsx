@@ -127,9 +127,9 @@ function CourseDetailTab() {
   };
   return (
     <div>
-      <div className="flex justify-between items-center md:mt-10 mb-4 border-b border-gray-200">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center md:mt-10 mb-4 border-b border-gray-200">
         <ul
-          className="flex flex-wrap -mb-px text-sm font-medium text-center"
+          className="flex -mb-px text-sm font-medium text-center"
           role="tablist"
         >
           <li className="mr-2" role="presentation">

@@ -84,7 +84,7 @@ function Questions() {
     const currentQuestion = list[currentQuestionIndex];
 
     return (
-        <div className="border shadow-lg outline-none rounded-lg">
+        <div className="border shadow-lg outline-none rounded-lg mt-4">
             <div className="p-4">
                 <h1 className="text-xl font-bold">Program: General Knowledge Test</h1>
                 <p className="text-lg font-bold">

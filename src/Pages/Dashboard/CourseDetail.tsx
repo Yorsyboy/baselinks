@@ -4,7 +4,7 @@ import React from 'react';
 
 function CourseDetail() {
     return (
-        <div className="flex flex-col gap-4 max-w-4xl mx-auto">
+        <div className="flex flex-col gap-4 max-w-4xl mx-auto mt-8">
             <div className="shadow-2xl flex flex-col justify-between items-center bg-white border border-gray-200 rounded-lg  md:flex-row md:max-w-6xl hover:bg-gray-100">
                 <div className="flex flex-col justify-between p-4 leading-normal">
                     <h5 className='font-bold text-xl'>Frontend Development with React</h5>
