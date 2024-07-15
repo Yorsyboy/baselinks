@@ -102,7 +102,6 @@ const HomeHeader = ({
             >
               Team
             </Link>
-            <div className="w-px h-5 bg-black/20"></div>
             <Link
               to="/auth/login"
               className="inline-flex items-center justify-center px-5 py-2.5 text-base font-semibold text-black border-2 border-lmsPrimary hover:bg-lmsPrimary rounded-full hover:text-white transition-all duration-200 focus:bg-black focus:text-white"

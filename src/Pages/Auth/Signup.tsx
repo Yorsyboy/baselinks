@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { SubmitButton } from '../../Components/Button/Index';
 import Select from '../../Components/Forms/Select';
 import { Logo } from '../../Assets/Index';
+import { useNavigate } from 'react-router-dom';
+
 
 const SignUpDisplay = () => {
     const [formData, setFormData] = useState<any>({
@@ -13,9 +15,10 @@ const SignUpDisplay = () => {
         dateOfBirth: '',
         password: '',
         confirmPassword: '',
-        email: ''
+        email: '',
     });
     const [error, setErrors] = useState<any>({});
+    const navigate = useNavigate();
 
     const handleInputChange = (name: string, value: any) => {
         setFormData((prevState: any) => ({
@@ -40,12 +43,22 @@ const SignUpDisplay = () => {
             return;
         }
 
+
+        if (password.length < 6) {
+            setErrors({
+                password: 'Password must be at least 6 characters long'
+            });
+            return;
+        }
         if (password !== confirmPassword) {
             setErrors({
                 confirmPassword: 'Password does not match'
             });
             return;
         }
+
+     
+        navigate('/auth/email-verify');
     };
     return (
         <div className="flex flex-col w-full  items-center   font-montRegular ">

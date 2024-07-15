@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface Option {
     name: string;
-    value: string;
+    value: any;
 }
 
 interface SelectProps {

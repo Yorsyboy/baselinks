@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Input from '../../Components/Forms/Input';
 import Password from '../../Components/Forms/Password';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { SubmitButton } from '../../Components/Button/Index';
 import CheckBox from '../../Components/Forms/CheckBox';
 import { Logo } from '../../Assets/Index';
@@ -12,6 +12,7 @@ const LoginDisplay = () => {
         email: ''
     });
     const [error, setErrors] = useState<any>({});
+    const navigate = useNavigate();
 
     const handleInputChange = (name: string, value: any) => {
         setFormData((prevState: any) => ({
@@ -36,6 +37,15 @@ const LoginDisplay = () => {
             });
             return;
         }
+
+        if (password.length < 6) {
+            setErrors({
+                password: 'Password must be at least 6 characters long'
+            });
+            return;
+        }
+
+        navigate('/user/dashboard');
     };
     return (
         <div className="flex flex-col w-full  items-center mt-20  font-montRegular ">

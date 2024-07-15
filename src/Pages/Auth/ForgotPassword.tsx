@@ -3,6 +3,8 @@ import { SubmitButton } from '../../Components/Button/Index';
 import Input from '../../Components/Forms/Input';
 import { Link } from 'react-router-dom';
 import { Arrow, Key, Logo } from '../../Assets/Index';
+import { useNavigate } from 'react-router-dom';
+
 
 interface ForgotPasswordProps {
     handleForgotPassword: (email: string) => void;
@@ -10,11 +12,18 @@ interface ForgotPasswordProps {
 
 const ForgotPassDisplay = ({ handleForgotPassword }: ForgotPasswordProps) => {
     const [email, setEmail] = useState('');
-    const [error, setError] = useState();
+    const [error, setError] = useState<string | undefined>();
+    const nav = useNavigate();
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        handleForgotPassword(email);
+
+        if (!email) {
+            setError('Email is required');
+            return;
+        }
+
+        nav('/auth/email-verify')
     };
 
     return (
@@ -27,7 +36,7 @@ const ForgotPassDisplay = ({ handleForgotPassword }: ForgotPasswordProps) => {
                 <h2 className="text-lmsPrimary text-3xl font-montBold font-bold align-center mt-4 text-center">Forgot your password?</h2>
                 <p className="text-lmsPrimary align-center text-lg text-center ">No worries we’ll send you reset instructions.</p>
             </div>
-            <form onSubmit={handleSubmit} className="w-full md:w-[90%] lg:w-[60%] mt-2">
+            <form className="w-full md:w-[90%] lg:w-[60%] mt-2">
                 <div className="py-2">
                     <Input
                         type="email"
@@ -41,7 +50,7 @@ const ForgotPassDisplay = ({ handleForgotPassword }: ForgotPasswordProps) => {
                 </div>
 
                 <div className="pt-4 md:py-3 font-montRegular">
-                    <SubmitButton type="submit">Confirm</SubmitButton>
+                    <SubmitButton onClick={handleSubmit} type="submit">Confirm</SubmitButton>
                 </div>
 
                 <Link to="/auth/login" className="py-2">
